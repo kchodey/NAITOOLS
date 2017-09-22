@@ -1,0 +1,18 @@
+<md-toolbar color="primary">
+    <span>NAI Tools</span>
+    <span class="spacer" ></span>
+</md-toolbar>
+
+<nav md-tab-nav-bar>
+
+            <a  md-tab-link routerLink="/"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+
+            <a  md-tab-link routerLink="/wfr" routerLinkActive="active">WFR</a>
+
+            <a  md-tab-link routerLink="/tort" routerLinkActive="active">TORT</a>
+
+            <a  md-tab-link routerLink="/ubt" routerLinkActive="active">UBT</a>
+
+<router-outlet></router-outlet>
+</nav>
+<footer></footer>
