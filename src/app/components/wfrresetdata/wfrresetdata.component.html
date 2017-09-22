@@ -2,9 +2,17 @@
 <form class="formwidth"  #nuidresetForm>
   Delete Applications :<br><br>
   <md-select placeholder="Environment" required>
-    <md-option *ngFor="let env of environments" value="env">{{env}}</md-option>
+    <md-option *ngFor="let env of environments">{{env}}</md-option>
   </md-select>
-  <br><br><br>
-  Input Type - test -- again :
-
+  <br><br>
+  <md-select placeholder="Input type" required>
+    <md-option *ngFor="let type of types">{{type}}</md-option>
+  </md-select>
+  <br><br>
+  <md-form-field class="fullwidth">
+    <textarea mdInput placeholder="empid/nuid"></textarea>
+  </md-form-field>
+  <br><br>
+  <button md-raised-button color="primary">submit</button>
+  <br><br>
 </form>

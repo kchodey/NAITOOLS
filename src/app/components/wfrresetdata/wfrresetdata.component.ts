@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class WfrresetdataComponent implements OnInit {
 
   environments =  ['QA','UAT'];
+  types = ['empid','nuid'];
   constructor() { }
 
   ngOnInit() {
