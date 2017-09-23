@@ -18,37 +18,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { WfrsetemailComponent } from './components/wfrsetemail/wfrsetemail.component';
 import { WfrresetdataComponent } from './components/wfrresetdata/wfrresetdata.component';
 
-const wfrChildRoutes: Routes = [
-  {
-    path: 'resetdata',
-    component: WfrresetdataComponent
-  },
-  {
-    path: 'setemail',
-    component: WfrsetemailComponent
-  }
-]
-
-const appRoutes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'wfr',
-    component: WfrComponent,
-    children: wfrChildRoutes
-  },
-  {
-    path: 'tort',
-    component: TortComponent
-  },
-  {
-    path: 'ubt',
-    component: UbtComponent
-  }
-]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,8 +36,7 @@ const appRoutes: Routes = [
     MaterialModule,
     MdButtonModule,
     MdInputModule,
-    MdTabsModule,
-    RouterModule.forRoot(appRoutes)
+    MdTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

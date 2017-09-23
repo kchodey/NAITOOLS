@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-wfrsetemail',
+  selector: 'wfrsetemail',
   templateUrl: './wfrsetemail.component.html',
   styleUrls: ['./wfrsetemail.component.css']
 })

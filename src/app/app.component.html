@@ -3,16 +3,9 @@
     <span class="spacer" ></span>
 </md-toolbar>
 
-<nav md-tab-nav-bar>
-
-            <a  md-tab-link routerLink="/"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-
-            <a  md-tab-link routerLink="/wfr" routerLinkActive="active">WFR</a>
-
-            <a  md-tab-link routerLink="/tort" routerLinkActive="active">TORT</a>
-
-            <a  md-tab-link routerLink="/ubt" routerLinkActive="active">UBT</a>
-
-<router-outlet></router-outlet>
-</nav>
-<footer></footer>
+<md-tab-group>
+        <md-tab label="Home"><home></home></md-tab>
+        <md-tab label="WFR"><wfr></wfr></md-tab>
+        <md-tab label="TORT"><tort></tort></md-tab>
+        <md-tab label="UBT"><ubt></ubt></md-tab>
+</md-tab-group>

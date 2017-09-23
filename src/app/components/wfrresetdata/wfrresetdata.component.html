@@ -1,16 +1,18 @@
 <p></p>
 <form class="formwidth"  #nuidresetForm>
   Delete Applications :<br><br>
-  <md-select placeholder="Environment" required>
-    <md-option *ngFor="let env of environments">{{env}}</md-option>
+  <md-select placeholder="Environment" required name="env" [(ngModel)]="env">
+    <md-option value="qa">QA</md-option>
+    <md-option value="uat">UAT</md-option>
   </md-select>
   <br><br>
-  <md-select placeholder="Input type" required>
-    <md-option *ngFor="let type of types">{{type}}</md-option>
+  <md-select placeholder="Input type" required name="type" [(ngModel)]="type">
+      <md-option value="empid">EMP ID</md-option>
+      <md-option value="nuid">NUID</md-option>
   </md-select>
   <br><br>
   <md-form-field class="fullwidth">
-    <textarea mdInput placeholder="empid/nuid"></textarea>
+    <textarea mdInput placeholder="Enter NUIDs (or) Employee IDs seperated by commas(,)" required></textarea>
   </md-form-field>
   <br><br>
   <button md-raised-button color="primary">submit</button>
