@@ -1,0 +1,34 @@
+<p></p>
+<form class="formwidth" #nuidresetForm="ngForm" (ngSubmit)="onSubmit(nuidresetForm.value)">
+  Delete Applications :<br><br>
+  <md-select placeholder="Environment" required name="env" [(ngModel)]="env">
+    <md-option value="qa">QA</md-option>
+    <md-option value="uat">UAT</md-option>
+  </md-select>
+  <br><br>
+  <md-select placeholder="Input type" required name="type" [(ngModel)]="type" (ngModelChange)="toggleType()" >
+    <md-option value="nuid">NUID</md-option>
+    <md-option value="empid">EMP ID</md-option>
+  </md-select>
+  <br><br>
+  <div *ngIf="isNuidList">
+    <md-form-field class="fullwidth">
+      <textarea mdInput placeholder="Enter NUIDs seperated by commas(,)" required name="nuidlist" [(ngModel)]="nuidlist" nuid-validator></textarea>
+    </md-form-field>
+    <br>
+  </div>
+  <div *ngIf="!isNuidList">
+    <md-form-field class="fullwidth">
+      <textarea mdInput placeholder="Enter Employee IDs seperated by commas(,)" required name="empidlist" [(ngModel)]="empidlist" empid-validator></textarea>
+    </md-form-field>
+    <br>
+  </div>
+  <div *ngIf="isNuidList">
+    <div *ngIf=(isValidationFailed) #nuidValidationFailedMessage>NUID validation failed , Please check the Nuids. </div><br>
+  </div>
+  <div *ngIf="!isNuidList">
+    <div *ngIf=(isValidationFailed) #nuidValidationFailedMessage>Employee ID validation failed , Please check the Employee IDs. </div><br>
+  </div>
+  <button md-raised-button color="primary" type="submit">submit</button>
+  <br><br>
+</form>
